@@ -6,6 +6,18 @@
 	<title>Cassendra的主页</title>
 	<link href="homepage.css" rel="stylesheet" type="text/css">
 	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- 新 Bootstrap4 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+
+	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -18,7 +30,7 @@
 	<div id="content">
 		<div id="home">
 			<div id="me">
-				<img id="amatar" src="img/头像.jpg"/>
+				<img id="amatar" src="img/头像.jpg" />
 				<text id="name">Cassendra</text>
 			</div>
 			<div id="photos">
@@ -107,14 +119,30 @@
 			}
 		</script>
 		<div id="plapiggy">
-			<div id="title_plapiggy">
-				<text id="text_plapiggy">PLAPIGGY</text>
-				<text id="text_subtitle">基于微信小程序下的智能停车场管理系统</text>
+			<div class="row">
+				<div class="col-sm-12">
+					<h1>PLAPIGGY
+						<small>基于微信小程序下的智能停车场管理系统</small>
+					</h1>
+				</div>
+				<div class="col-sm-1"></div>
+				<blockquote class="col-sm-10">
+					<p>“泊拉猪”是泊拉猪科技有限公司开发的智能停车场管理系统。该系统对于用户可提供：停车场详细信息查询、空余车位查询、智能车位导航、自助扣费、已停车位记录、停车状态变更提醒、周边设施推荐、历史记录查询等功能。同时，对于停车场可以：降低管理成本、提高管理效率、带动关联商场酒店经济发展、获取停车流量统计数据、改善由区域拥堵带来的社会经济效益低下的问题。</p>
+					<footer class="blockquote-footer">From BIGOrange</footer>
+				</blockquote>
+				<div class="col-sm-1"></div>
 			</div>
-			<img id="img_qrcode" src="img/gh_dec9b278e947_1280.jpg"></img>
+			<img class="col-sm-2" id="img_qrcode" src="img/gh_dec9b278e947_1280.jpg"></img>
+			<button class="col-sm-12" type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">折叠</button>
+			<div class="collapse">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
 		</div>
 		<div id="contact">
-			<text id="text_pigHomePage">猪的主页：https://github.com/xzzpig</text>
+			<button type="button" class="btn btn-primary">
+				<a href="https://github.com/xzzpig" id="button_pig">猪的主页</a>
+			</button>
 		</div>
 	</div>
 	<script>
