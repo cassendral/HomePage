@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Cassendra的主页</title>
+	<link href="homepage.css" rel="stylesheet" type="text/css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="top">
+		<a class="top_buttons" href="#contact">联系猪</a>
+		<a class="top_buttons" href="#plapiggy">Plapiggy</a>
+		<a class="top_buttons" href="#songs">全民k歌</a>
+		<a class="top_buttons" href="#home">Home</a>
+	</div>
+	<div id="content">
+		<div id="home">
+			<div id="me">
+				<img id="amatar" src="img/头像.jpg"/>
+				<text id="name">Cassendra</text>
+			</div>
+			<div id="photos">
+				<img class="img_photos" src="img/A001F947FE8580178556B119F7B8E075.png" />
+				<img class="img_photos" src="img/31A4FEF5755A8AB3ADDBB9D3115ACADB.png" />
+				<img class="img_photos" src="img/gif_pigs.gif" />
+				<img class="img_photos" src="img/4B67CDB9D6CD09D329A040230AC8749F.png" />
+				<img class="img_photos" src="img/22D80D786D46F3D07EB7B850AE415421.png" />
+				<img class="img_photos" src="img/EF4A77843ABABBBA8CAF0CA71087932E.png" />
+			</div>
+		</div>
+		<div id="songs">
+			<div class="view_album">
+				<img class="img_album" music="IZX1OpI-mAZGyIV_" src="https://shp.qpic.cn/ttkg/0/d69720effa39dab9047e47ef83f9fafc59814ead/640?j=PiajxSqBRaEIf0bHhsJQ0QVoFSjos8ibuwib8icMibSGWGru7aj84uAW826V84GUk58dtVGrIjzPEcNIuZJAHJGfHTBHgafTsNxvkKSkSEGoGdeHzN0CqurnxAMFMaQicXBKfW9NicSMMZLic2A"
+				 onmousemove="clickPlayIcon(this)"></img>
+				<text class="text_album">醉赤壁</text>
+			</div>
+			<div class="view_album">
+				<img class="img_album" music="yw-J6hyXpOKTFyiN" src="img/CCC5FFF4DAC5D62CE0238FF6949FC5DA.png" onmousemove="clickPlayIcon(this)"></img>
+				<text class="text_album">我喜欢上你时的内心活动</text>
+			</div>
+			<div class="view_album">
+				<img class="img_album" music="hAUK_yhF7b9yhhQ7" src="http://y.gtimg.cn//music//photo_new//T002R500x500M0000019Kyrr4RyQPS.jpg?max_age=2592000"
+				 onmousemove="clickPlayIcon(this)"></img>
+				<text class="text_album">让我留在你身边</text>
+			</div>
+			<div class="view_album">
+				<img class="img_album" music="5KnAmv5HRqBGe55N" src="img/CCC5FFF4DAC5D62CE0238FF6949FC5DA.png" onmousemove="clickPlayIcon(this)"></img>
+				<text class="text_album">人质</text>
+			</div>
+			<div class="view_album">
+				<img class="img_album" music="vJzwk5vePT0PKvTQ" src="img/album_5.png" onmousemove="clickPlayIcon(this)"></img>
+				<text class="text_album">我的一个道姑朋友</text>
+			</div>
+			<div class="view_album">
+				<img class="img_album" music="1G6I-i1O3gWK11mL" src="img/CCC5FFF4DAC5D62CE0238FF6949FC5DA.png" onmousemove="clickPlayIcon(this)"></img>
+				<text class="text_album">红尘客栈</text>
+			</div>
+			<div id="shade" onmouseout="notClick(this)">
+				<div id="square"></div>
+				<img id="icon_play" src="icon/play.png" onclick="playMusic(this);changeIcon(this)" />
+			</div>
+			<audio id="myaudio" src="" controls="controls" loop="false" hidden="true"></audio>
+		</div>
+		<script>
+			var shareID = "";
+			var currentX = null;
+			function clickPlayIcon(x) {
+				var shade = document.getElementById("shade")
+				shade.style.left = x.offsetLeft + "px";
+				shade.style.top = x.offsetTop + "px";
+				shareID = (x.getAttribute("music"))
+				currentX = x;
+				var icon_play = document.getElementById('icon_play');
+				if (currentX == musicNow) {
+					icon_play.setAttribute("src", "icon/pause.png");
+				} else {
+					icon_play.setAttribute("src", "icon/play.png");
+				}
+			}
+			function notClick(x) {
+				var shade = document.getElementById("shade")
+				shade.style.left = "-300px";
+				shade.style.top = "-300px";
+			}
+			var musicNow = null;
+			function playMusic(x) {
+				var myAuto = document.getElementById('myaudio');
+				if (musicNow == null) {
+					myAuto.setAttribute("src", "http://node.kg.qq.com/cgi/fcgi-bin/fcg_get_play_url?shareid=" + shareID)
+					myAuto.play();
+					musicNow = currentX;
+				} else if (musicNow == currentX) {
+					myAuto.pause();
+					musicNow = null;
+				} else {
+					myAuto.pause();
+					musicNow = currentX;
+					myAuto.setAttribute("src", "http://node.kg.qq.com/cgi/fcgi-bin/fcg_get_play_url?shareid=" + shareID)
+					myAuto.play();
+				}
+			}
+			function changeIcon(x) {
+				var icon_play = document.getElementById('icon_play');
+				icon_play.setAttribute("src", "icon/pause.png");
+			}
+		</script>
+		<div id="plapiggy">
+			<div id="title_plapiggy">
+				<text id="text_plapiggy">PLAPIGGY</text>
+				<text id="text_subtitle">基于微信小程序下的智能停车场管理系统</text>
+			</div>
+			<img id="img_qrcode" src="img/gh_dec9b278e947_1280.jpg"></img>
+		</div>
+		<div id="contact">
+			<text id="text_pigHomePage">猪的主页：https://github.com/xzzpig</text>
+		</div>
+	</div>
+	<script>
+		$('a[href*="#"]:not([href="#"])').click(function () {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top - 100
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
