@@ -132,10 +132,10 @@ body {
 
 #plapiggy {
 	display: flex;
-	margin-top: 200px;
 	background: white;
 	width: 100%;
 	margin-left: 10%;
+	padding-top: 50px;
 }
 
 #img_qrcode {
@@ -143,7 +143,58 @@ body {
 	width: 200px;
 }
 
-#button_pig {
-	color: white;
-	text-decoration: none;
+#contact {
+	cursor: url('icon/pignose.ico'),auto;
+	width: 100%;
+	height: 550px;
+	margin-top: 150px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#peiqi_contact li img {
+	margin: auto;
+	z-index: 2;
+	position: absolute;
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+}
+
+#peiqi_contact li img:hover {
+	-webkit-transform: rotate(360deg) scale(1.5);
+	-moz-transform: rotate(360deg) scale(1.5);
+	-ms-transform: rotate(360deg) scale(1.5);
+	-o-transform: rotate(360deg) scale(1.5);
+}
+
+#peiqi_left {
+	left: 100px;
+}
+
+#peiqi_right {
+	right: 100px;
+}
+
+#text_contact {
+	display: flex;
+	flex-direction: column;
+	padding-top: 100px;
+	width: 40%;
+	align-items: center;
+}
+
+#contact_pig {
+	display: flex;
+	flex-direction: column;
+	font-size: 56px;
+	color: black;
+}
+
+#button_pigpage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 50px;
 }

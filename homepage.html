@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/idangerous.swiper.css">
 	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/shutter.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
 
 	<!-- 新 Bootstrap4 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
@@ -26,7 +27,7 @@
 
 <body>
 	<div id="top">
-		<a class="top_buttons" href="#contact">联系猪</a>
+		<a class="top_buttons" href="#contact">联系猪猪</a>
 		<a class="top_buttons" href="#plapiggy">Plapiggy</a>
 		<a class="top_buttons" href="#songs">全民k歌</a>
 		<a class="top_buttons" href="#home">Home</a>
@@ -201,7 +202,7 @@
 				<img src="plapiggy/search.png" />
 			</div>
 			<div class="swiper-slide">
-				<img src="plapiggy/details.png"/>
+				<img src="plapiggy/details.png" />
 			</div>
 			<div class="swiper-slide">
 				<img src="plapiggy/indoor.png" />
@@ -247,9 +248,16 @@
 		});
 	</script>
 	<div id="contact">
-		<button type="button" class="btn btn-primary">
-			<a href="https://github.com/xzzpig" id="button_pig">猪的主页</a>
-		</button>
+		<div id="peiqi_contact">
+			<li>
+				<img src="img/peiqi.png" id="peiqi_left" />
+				<img src="img/peiqi_r.png" id="peiqi_right" />
+			</li>
+		</div>
+		<div id="text_contact">
+			<text id="contact_pig">联系猪猪</text>
+			<button type="button" class="btn btn-primary" id="button_pigpage" onclick="window.open('https://github.com/xzzpig')">猪猪主页</button>
+		</div>
 	</div>
 </body>
 
