@@ -73,13 +73,9 @@ body {
 	overflow-x: auto;
 }
 
-.img_photos {
-	width: 180px;
-	height: 180px;
-	border-radius: 5%;
-	display: flex;
-	align-items: center;
-	margin-left: 20px;
+.carousel-inner img {
+      width: 180px;
+      height: 180px;
 }
 
 #songs{
@@ -143,10 +139,8 @@ body {
 }
 
 #img_qrcode {
-	display: flex;
 	height: 200px;
 	width: 200px;
-	margin-right: 10%;
 }
 
 #button_pig {
