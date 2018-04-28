@@ -163,6 +163,7 @@ body {
 }
 
 #peiqi_contact li img:hover {
+	transform: rotate(360deg) scale(1.5);
 	-webkit-transform: rotate(360deg) scale(1.5);
 	-moz-transform: rotate(360deg) scale(1.5);
 	-ms-transform: rotate(360deg) scale(1.5);
