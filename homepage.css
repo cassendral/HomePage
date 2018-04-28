@@ -143,6 +143,10 @@ body {
 	width: 200px;
 }
 
+#slide_pagination {
+	left: 40%;
+}
+
 #contact {
 	cursor: url('icon/pignose.ico'),auto;
 	width: 100%;
